@@ -66,19 +66,19 @@ export const constantRoutes = [
         path: 'table',
         name: '任务列表',
         component: () => import('@/views/table/index'),
-        meta: { title: '任务列表', icon: 'table' }
+        meta: { title: '任务列表', icon: 'el-icon-folder-opened' }
       },
       {
         path: 'table',
         name: '执行记录',
         component: () => import('@/views/table/index'),
-        meta: { title: '执行记录', icon: 'table' }
+        meta: { title: '执行记录', icon: 'el-icon-document' }
       },
       {
         path: 'tree',
         name: '异常日志',
         component: () => import('@/views/tree/index'),
-        meta: { title: '异常日志', icon: 'tree' }
+        meta: { title: '异常日志', icon: 'el-icon-document-delete' }
       }
     ]
   },
@@ -88,25 +88,25 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/example/table',
     name: '权限管理',
-    meta: { title: '权限管理', icon: 'el-icon-s-help' },
+    meta: { title: '权限管理', icon: 'el-icon-s-tools' },
     children: [
       {
         path: 'table',
         name: '用户管理',
         component: () => import('@/views/table/index'),
-        meta: { title: '用户管理', icon: 'table' }
+        meta: { title: '用户管理', icon: 'el-icon-user' }
       },
       {
         path: 'table',
         name: '角色管理',
         component: () => import('@/views/table/index'),
-        meta: { title: '角色管理', icon: 'table' }
+        meta: { title: '角色管理', icon: 'el-icon-news' }
       },
       {
         path: 'tree',
         name: '菜单管理',
         component: () => import('@/views/tree/index'),
-        meta: { title: '菜单管理', icon: 'tree' }
+        meta: { title: '菜单管理', icon: 'el-icon-mouse' }
       }
     ]
   },
