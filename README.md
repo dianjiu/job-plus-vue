@@ -14,6 +14,27 @@
 
 [https://gitee.io/dianjiu/task-manage](https://gitee.io/dianjiu/task-manage)
 
+## 在线演示
+
+http://task.point9.top/damin   (部署中。。。)
+
+测试账号  	测试密码
+
+admin 		admin
+
+user 		user
+
+## 项目图片
+
+### 页面演示
+> 登录页
+
+![登录页](./data/img/login.png)
+
+> 仪表盘
+
+![仪表盘](./data/img/dashboard.png)
+
 ## Build Setup
 
 ```bash
