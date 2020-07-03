@@ -13,7 +13,7 @@ const users = {
     roles: ['admin'],
     introduction: 'I am a super administrator',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Super Admin'
+    name: '点九'
   },
   'editor-token': {
     roles: ['editor'],
@@ -26,7 +26,7 @@ const users = {
 module.exports = [
   // user login
   {
-    url: '/task-manage-vue/user/login',
+    url: '/user/login',
     type: 'post',
     response: config => {
       const { username } = config.body
@@ -49,7 +49,7 @@ module.exports = [
 
   // get user info
   {
-    url: '/task-manage-vue/user/info\.*',
+    url: '/user/info\.*',
     type: 'get',
     response: config => {
       const { token } = config.query
@@ -72,7 +72,7 @@ module.exports = [
 
   // user logout
   {
-    url: '/task-manage-vue/user/logout',
+    url: '/user/logout',
     type: 'post',
     response: _ => {
       return {

@@ -51,7 +51,7 @@ export default {
     }
   },
   data() {
-    // To fix https://github.com/dianjiu/task-manage-vue/issues/237
+    // To fix https://github.com/dianjiu/issues/237
     // TODO: refactor with render function
     this.onlyOneChild = null
     return {}
