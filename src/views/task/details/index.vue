@@ -92,20 +92,24 @@
       </el-table-column>
       <el-table-column label="操作" >
         <template slot-scope="scope">
-          <el-switch
-            class="switch-btn"
-            v-model="scope.row.status == 0 ? false : true"
-            active-color="#13ce66"
-            inactive-color="#ff4949"
-          @click="changeStatus(scope.$index, scope.row.id)">
-          </el-switch>
-          <el-button
-            size="mini"
-            @click="handleEdit(scope.$index, scope.row.id)">编辑</el-button>
-          <el-button
-            size="mini"
-            type="danger"
-            @click="handleDelete(scope.$index, scope.row.id)">删除</el-button>
+          <el-tooltip class="item" effect="dark" content="修改状态" placement="bottom">
+            <el-switch
+              class="switch-btn"
+              v-model="scope.row.status == 0 ? false : true"
+              active-color="#13ce66"
+              inactive-color="#ff4949"
+              @click="changeStatus(scope.$index, scope.row.id)">
+            </el-switch>
+          </el-tooltip>
+          <el-tooltip class="item" effect="dark" content="立即执行" placement="bottom">
+            <el-button @click="handleEdit(scope.$index, scope.row.id)" size="mini" type="warning" icon="el-icon-caret-right" circle></el-button>
+          </el-tooltip>
+          <el-tooltip class="item" effect="dark" content="编辑" placement="bottom">
+            <el-button @click="handleEdit(scope.$index, scope.row.id)" size="mini" type="primary" icon="el-icon-edit" circle></el-button>
+          </el-tooltip>
+          <el-tooltip class="item" effect="dark" content="删除" placement="bottom">
+            <el-button @click="handleDelete(scope.$index, scope.row.id)" size="mini" type="danger" icon="el-icon-delete" circle></el-button>
+          </el-tooltip>
         </template>
       </el-table-column>
     </el-table>
