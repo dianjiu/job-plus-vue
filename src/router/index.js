@@ -56,56 +56,62 @@ export const constantRoutes = [
   },
 
   {
-    path: '/example',
+    path: '/task',
     component: Layout,
-    redirect: '/example/table',
+    redirect: '/task/details',
     name: '任务管理',
     meta: { title: '任务管理', icon: 'el-icon-s-help' },
     children: [
       {
-        path: 'table',
+        path: 'details',
         name: '任务列表',
-        component: () => import('@/views/table/index'),
+        component: () => import('@/views/task/details/index'),
         meta: { title: '任务列表', icon: 'el-icon-folder-opened' }
       },
       {
-        path: 'table',
+        path: 'records',
         name: '执行记录',
-        component: () => import('@/views/table/index'),
+        component: () => import('@/views/task/records/index'),
         meta: { title: '执行记录', icon: 'el-icon-document' }
       },
       {
-        path: 'tree',
+        path: 'errors',
         name: '异常日志',
-        component: () => import('@/views/tree/index'),
+        component: () => import('@/views/task/errors/index'),
         meta: { title: '异常日志', icon: 'el-icon-document-delete' }
+      },
+      {
+        path: 'corns',
+        name: '生成器',
+        component: () => import('@/views/task/crons/index'),
+        meta: { title: '生成器', icon: 'el-icon-view' }
       }
     ]
   },
 
   {
-    path: '/example',
+    path: '/manage',
     component: Layout,
-    redirect: '/example/table',
+    redirect: '/manage/users',
     name: '权限管理',
     meta: { title: '权限管理', icon: 'el-icon-s-tools' },
     children: [
       {
-        path: 'table',
+        path: 'users',
         name: '用户管理',
-        component: () => import('@/views/table/index'),
+        component: () => import('@/views/manage/users/index'),
         meta: { title: '用户管理', icon: 'el-icon-user' }
       },
       {
-        path: 'table',
+        path: 'roles',
         name: '角色管理',
-        component: () => import('@/views/table/index'),
+        component: () => import('@/views/manage/roles/index'),
         meta: { title: '角色管理', icon: 'el-icon-news' }
       },
       {
-        path: 'tree',
+        path: 'menus',
         name: '菜单管理',
-        component: () => import('@/views/tree/index'),
+        component: () => import('@/views/manage/menus/index'),
         meta: { title: '菜单管理', icon: 'el-icon-mouse' }
       }
     ]
