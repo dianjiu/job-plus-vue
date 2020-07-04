@@ -29,11 +29,19 @@ user 		user
 ### 页面演示
 > 登录页
 
-![登录页](./data/img/login.png)
+![登录页](./data/img/task-manage-login.jpg)
 
 > 仪表盘
 
-![仪表盘](./data/img/dashboard.png)
+![仪表盘](./data/img/task-manage-index.jpg)
+
+> 任务管理 =》生成器 （关闭cron生成器）
+
+![仪表盘](./data/img/task-core-off.jpg)
+
+> 任务管理 =》生成器 （打开cron生成器）
+
+![仪表盘](./data/img/task-cron-on.jpg)
 
 ## Build Setup
 
