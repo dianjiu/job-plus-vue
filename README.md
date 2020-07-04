@@ -35,6 +35,10 @@ user 		user
 
 ![仪表盘](./data/img/task-manage-index.jpg)
 
+> 任务管理 =》任务列表
+
+![仪表盘](./data/img/task-details-list.jpg)
+
 > 任务管理 =》生成器 （关闭cron生成器）
 
 ![仪表盘](./data/img/task-core-off.jpg)
