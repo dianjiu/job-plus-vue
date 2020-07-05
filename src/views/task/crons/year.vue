@@ -22,13 +22,13 @@ export default {
   props: {
     value: {
       type: String,
-      default: '*'
+      default: ''
     }
   },
   data () {
     let year = new Date().getFullYear()
     return {
-      type: '1', // 类型
+      type: '5', // 类型
       cycle: { // 周期
         start: year,
         end: year
@@ -66,7 +66,7 @@ export default {
           result.push(`${this.last === 0 ? '' : this.last}L`)
           break
         default: // 不指定
-          result.push('?')
+          result.push('')
           break
       };
       this.$emit('input', result.join(''))
