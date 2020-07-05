@@ -120,6 +120,10 @@ user 		user
 
 ![仪表盘](./data/img/task-details-list.jpg)
 
+> 任务管理 =》执行记录
+
+![仪表盘](./data/img/task-records-list.jpg)
+
 > 任务管理 =》生成器 （关闭cron生成器）
 
 ![仪表盘](./data/img/task-core-off.jpg)
