@@ -90,14 +90,9 @@
 - [x] 国际化：后管系统支持国际化设置，提供中文、英文两种可选语言，默认为中文；
 - [ ] 容器化：提供官方docker镜像，并实时更新推送dockerhub，进一步实现产品开箱即用；
 
-## 更新日志
-[博客地址](http://point9.top)
-
-[Task Manage 更新日志](http://point9.top/articles/2020/07/04/1593856335181.html)
-
 ## 在线演示
 
-http://task.point9.top/damin   (部署中。。。)
+http://task.dianjiu.org.cn   (部署中。。。)
 
 测试账号  	测试密码
 
@@ -119,6 +114,10 @@ user 		user
 > 任务管理 =》任务列表
 
 ![仪表盘](./data/img/task-details-list.jpg)
+
+> 任务管理 =》执行记录
+
+![仪表盘](./data/img/task-records-list.jpg)
 
 > 任务管理 =》生成器 （关闭cron生成器）
 
@@ -171,6 +170,15 @@ yarn run lint
 # 代码格式检查并自动修复
 yarn run lint -- --fix
 ```
+
+## 更新日志
+[博客地址](http://point9.top)
+
+[Task Manage 更新日志](http://point9.top/articles/2020/07/04/1593856335181.html)
+
+[Task Manage 分布式ID的思考](http://point9.top/articles/2020/07/05/1593882775705.html)
+
+[Task Manage 执行策略的思考](http://point9.top/articles/2020/07/05/1593884142790.html)  
 
 ## 最后致谢
 感谢以下开源项目提供的项目参考

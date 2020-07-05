@@ -1,28 +1,5 @@
 <template>
   <div class="details-container">
-    <!--头部-->
-    <el-row class="details-top">
-      <el-col :span="18">
-        <div class="grid-content bg-purple">
-          <el-input class="input-size"
-            placeholder="任务名称"
-            v-model="input1">
-          </el-input>
-          <el-input class="input-size"
-            placeholder="分组名称"
-            v-model="input2">
-          </el-input>
-          <el-button type="primary" icon="el-icon-search">搜索</el-button>
-        </div>
-      </el-col>
-      <el-col :span="6">
-        <div class="grid-content add-button-light">
-          <el-button type="primary" icon="el-icon-edit">
-            新增任务
-          </el-button>
-        </div>
-      </el-col>
-    </el-row>
     <!--表单-->
     <el-table
       class="details-body"
@@ -44,16 +21,6 @@
         width="150">
       </el-table-column>
       <el-table-column
-        prop="taskDesc"
-        label="任务描述"
-        width="150">
-      </el-table-column>
-      <el-table-column
-        prop="cornRule"
-        label="CRON表达式"
-        width="150">
-      </el-table-column>
-      <el-table-column
         prop="sendType"
         label="请求方式"
         width="100">
@@ -66,46 +33,38 @@
       <el-table-column
         prop="sendParam"
         label="请求参数"
+        width="300">
+      </el-table-column>
+      <el-table-column
+        prop="returnInfo"
+        label="响应信息"
+        width="300">
+      </el-table-column>
+      <el-table-column
+        prop="executeTime"
+        label="执行时间"
         width="200">
       </el-table-column>
       <el-table-column
-          label="任务状态"
+          label="执行结果"
           width="100">
         <template slot-scope="scope">
           <el-popover trigger="hover" placement="top">
             <div slot="reference" class="name-wrapper">
               <el-tag size="medium"
-                      :type="scope.row.status == 0 ? 'danger' : 'success'">
-                {{scope.row.status == 0 ? "已停用" : "已启用" }}
+                      :type="scope.row.taskStatus == 0 ? 'danger' : 'success'">
+                {{scope.row.taskStatus == 0 ? "失败" : "成功" }}
               </el-tag>
             </div>
           </el-popover>
         </template>
       </el-table-column>
-      <el-table-column
-        label="下次执行时间"
-        width="200">
-        <template slot-scope="scope">
-          <i class="el-icon-time"></i>
-          <span style="margin-left: 10px">{{ scope.row.nextExecuteTime }}</span>
-        </template>
-      </el-table-column>
       <el-table-column label="操作" >
         <template slot-scope="scope">
-          <el-switch
-            class="switch-btn"
-            v-model="scope.row.status == 0 ? false : true"
-            active-color="#13ce66"
-            inactive-color="#ff4949"
-          @click="changeStatus(scope.$index, scope.row.id)">
-          </el-switch>
-          <el-button
-            size="mini"
-            @click="handleEdit(scope.$index, scope.row.id)">编辑</el-button>
           <el-button
             size="mini"
             type="danger"
-            @click="handleDelete(scope.$index, scope.row.id)">删除</el-button>
+            @click="handleDelete(scope.$index, scope.row.id)">查看</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -118,7 +77,7 @@
         :page-sizes="[10, 20, 30, 40]"
         :page-size="10"
         layout="total, sizes, prev, pager, next, jumper"
-        :total="4">
+        :total="2">
       </el-pagination>
     </div>
   </div>
@@ -136,46 +95,44 @@ export default {
         id:'1',
         taskName: 'local-test',
         groupName: 'task-manage',
-        taskDesc: '获取定时任务信息',
-        cornRule: '0 0/5 * * * ? ',
         sendType: 'GET',
-        sendUrl: 'http://localhost:8080/tTaskDetails/get/2',
-        sendParam: '',
-        status: '1',
-        nextExecuteTime: '2020-07-02 17:15:00'
+        sendUrl: 'http://localhost:8080/tTaskDetails/get',
+        sendParam: '2',
+        returnInfo: '{\n' +
+          '  "code": "400",\n' +
+          '  "msg": "根据id【2】没有查到相关记录！"\n' +
+          '}',
+        executeTime: '2020-07-02 17:15:00',
+        taskStatus: '0'
       }, {
         id:'2',
         taskName: 'local-test',
         groupName: 'task-manage',
-        taskDesc: '获取定时任务信息',
-        cornRule: '0 0/5 * * * ? ',
         sendType: 'GET',
-        sendUrl: 'http://localhost:8080/tTaskDetails/get/2',
-        sendParam: '',
-        status: '0',
-        nextExecuteTime: '2020-07-02 17:15:00'
-      }, {
-        id:'3',
-        taskName: 'local-test',
-        groupName: 'task-manage',
-        taskDesc: '获取定时任务信息',
-        cornRule: '0 0/5 * * * ? ',
-        sendType: 'GET',
-        sendUrl: 'http://localhost:8080/tTaskDetails/get/2',
-        sendParam: '',
-        status: '0',
-        nextExecuteTime: '2020-07-02 17:15:00'
-      }, {
-        id:'4',
-        taskName: 'local-test',
-        groupName: 'task-manage',
-        taskDesc: '获取定时任务信息',
-        cornRule: '0 0/5 * * * ? ',
-        sendType: 'GET',
-        sendUrl: 'http://localhost:8080/tTaskDetails/get/2',
-        sendParam: '',
-        status: '1',
-        nextExecuteTime: '2020-07-02 17:15:00'
+        sendUrl: 'http://localhost:8080/tTaskDetails/get',
+        sendParam: '20200705',
+        returnInfo: '{\n' +
+          '  "code": "200",\n' +
+          '  "data": {\n' +
+          '    "cornRule": "0 0/5 * * * ? ",\n' +
+          '    "createTime": 1593672622000,\n' +
+          '    "groupName": "task-manage",\n' +
+          '    "groupNo": "G-2493d162-c845-4768-9f6e-3f1f09d405fb",\n' +
+          '    "id": 20200705,\n' +
+          '    "nextExecuteTime": 1593929100000,\n' +
+          '    "sendParam": "",\n' +
+          '    "sendType": "GET",\n' +
+          '    "sendUrl": "127.0.0.1:8080/tTaskDetails/get/2",\n' +
+          '    "status": "1",\n' +
+          '    "taskDesc": "获取定时任务信息",\n' +
+          '    "taskName": "local-test",\n' +
+          '    "taskNo": "T-9f690d82-6276-43a0-a928-ed9030f10f38",\n' +
+          '    "updateTime": 1593928800000\n' +
+          '  },\n' +
+          '  "msg": "查询成功！"\n' +
+          '}',
+        executeTime: '2020-07-02 17:15:00',
+        taskStatus: '1'
       }]
     }
   },
@@ -202,11 +159,6 @@ export default {
 <style lang="scss" scoped>
 .details-container{
   margin: 25px;
-}
-.details-top{
-  .add-button-light{
-    float: right;
-  }
 }
 .details-body{
   width: 100%;
