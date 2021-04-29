@@ -102,32 +102,6 @@ admin 		admin
 
 user 		user
 
-## 项目图片
-
-### 页面演示
-> 登录页
-
-![登录页](./data/img/job-plus-login.jpg)
-
-> 仪表盘
-
-![仪表盘](./data/img/job-plus-index.jpg)
-
-> 任务管理 =》任务列表
-
-![仪表盘](./data/img/task-details-list.jpg)
-
-> 任务管理 =》执行记录
-
-![仪表盘](./data/img/task-records-list.jpg)
-
-> 任务管理 =》生成器 （关闭cron生成器）
-
-![仪表盘](./data/img/task-core-off.jpg)
-
-> 任务管理 =》生成器 （打开cron生成器）
-
-![仪表盘](./data/img/task-cron-on.jpg)
 
 ## Build Setup
 
@@ -173,14 +147,32 @@ yarn run lint
 yarn run lint -- --fix
 ```
 
-## 更新日志
-[博客地址](http://point9.top)
+## 项目图片
 
-[Task Manage 更新日志](http://point9.top/articles/2020/07/04/1593856335181.html)
+### 页面演示
+> 登录页
 
-[Task Manage 分布式ID的思考](http://point9.top/articles/2020/07/05/1593882775705.html)
+![登录页](./data/img/task-manage-login.jpg)
 
-[Task Manage 执行策略的思考](http://point9.top/articles/2020/07/05/1593884142790.html)  
+> 仪表盘
+
+![仪表盘](./data/img/task-manage-index.jpg)
+
+> 任务管理 =》任务列表
+
+![仪表盘](./data/img/task-details-list.jpg)
+
+> 任务管理 =》执行记录
+
+![仪表盘](./data/img/task-records-list.jpg)
+
+> 任务管理 =》生成器 （关闭cron生成器）
+
+![仪表盘](./data/img/task-core-off.jpg)
+
+> 任务管理 =》生成器 （打开cron生成器）
+
+![仪表盘](./data/img/task-cron-on.jpg)
 
 ## 最后致谢
 感谢以下开源项目提供的项目参考
