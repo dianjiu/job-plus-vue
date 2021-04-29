@@ -16,7 +16,7 @@
               Home
             </el-dropdown-item>
           </router-link>
-          <a target="_blank" href="https://github.com/dianjiu/task-manage-vue">
+          <a target="_blank" href="https://github.com/dianjiu/job-plus-vue">
             <el-dropdown-item>Github</el-dropdown-item>
           </a>
           <a target="_blank" href="https://dianjiu.github.io/vue-element-admin-site/#/">

@@ -1,7 +1,7 @@
 {
-  "name": "task-manage-vue",
+  "name": "job-plus-vue",
   "version": "4.4.0",
-  "description": "A vue admin template with Element UI for task-manage",
+  "description": "A vue admin template with Element UI for job-plus",
   "author": "DainjiU <dianjiu@dianjiu.com>",
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -9,7 +9,6 @@
     "build:stage": "vue-cli-service build --mode staging",
     "preview": "node build/index.js --preview",
     "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
-    "lint": "eslint --ext .js,.vue src",
     "test:unit": "jest --clearCache && vue-cli-service test:unit",
     "test:ci": "npm run lint && npm run test:unit"
   },
@@ -29,18 +28,14 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "4.4.4",
-    "@vue/cli-plugin-eslint": "4.4.4",
     "@vue/cli-plugin-unit-jest": "4.4.4",
     "@vue/cli-service": "4.4.4",
     "@vue/test-utils": "1.0.0-beta.29",
     "autoprefixer": "9.5.1",
-    "babel-eslint": "10.1.0",
     "babel-jest": "23.6.0",
     "babel-plugin-dynamic-import-node": "2.3.3",
     "chalk": "2.4.2",
     "connect": "3.6.6",
-    "eslint": "6.7.2",
-    "eslint-plugin-vue": "6.2.2",
     "html-webpack-plugin": "3.2.0",
     "less": "^3.11.3",
     "less-loader": "^6.2.0",

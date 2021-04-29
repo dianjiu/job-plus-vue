@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">你好: {{ name }}，欢迎使用task-manage定时任务管理系统</div>
+    <div class="dashboard-text">你好: {{ name }}，欢迎使用Job Plus定时任务管理系统</div>
   </div>
 </template>
 

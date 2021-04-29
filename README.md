@@ -1,24 +1,24 @@
-# task-manage-vue
+# job-plus-vue
 
-> 基于Vue的Task Manage的后管UI
+> 基于Vue的Job Plus的后管UI
 
-![VUE](https://img.shields.io/badge/vue-4.0-green.svg?style=flat-square) [![LICENSE](https://img.shields.io/github/license/dianjiu/task-manage-vue.svg?style=flat-square)](https://github.com/dianjiu/task-manage-vue/blob/master/LICENSE)   [![star](https://img.shields.io/github/stars/dianjiu/task-manage-vue.svg?label=Stars&style=social)](https://github.com/dianjiu/task-manage-vue) [![star](https://gitee.com/dianjiu/task-manage-vue/badge/star.svg?theme=white)](https://gitee.com/dianjiu/task-manage-vue) 
+![VUE](https://img.shields.io/badge/vue-4.0-green.svg?style=flat-square) [![LICENSE](https://img.shields.io/github/license/dianjiu/job-plus-vue.svg?style=flat-square)](https://github.com/dianjiu/job-plus-vue/blob/master/LICENSE)   [![star](https://img.shields.io/github/stars/dianjiu/job-plus-vue.svg?label=Stars&style=social)](https://github.com/dianjiu/job-plus-vue) [![star](https://gitee.com/dianjiu/job-plus-vue/badge/star.svg?theme=white)](https://gitee.com/dianjiu/job-plus-vue) 
 
 
-[https://github.com/dianjiu/task-manage-vue](https://github.com/dianjiu/task-manage-vue)
+[https://github.com/dianjiu/job-plus-vue](https://github.com/dianjiu/job-plus-vue)
 
-[https://gitee.io/dianjiu/task-manage-vue](https://gitee.io/dianjiu/task-manage-vue)
+[https://gitee.io/dianjiu/job-plus-vue](https://gitee.io/dianjiu/job-plus-vue)
 
-## 相关项目 task-manage 
+## 相关项目 job-plus 
 
 > 基于SpringBoot的轻量级定时任务管理系统
 
-![SpringBoot](https://img.shields.io/badge/springboot-2.3.1-green.svg?style=flat-square) [![LICENSE](https://img.shields.io/github/license/dianjiu/task-manage.svg?style=flat-square)](https://github.com/dianjiu/task-manage/blob/master/LICENSE)   [![star](https://img.shields.io/github/stars/dianjiu/task-manage.svg?label=Stars&style=social)](https://github.com/dianjiu/task-manage) [![star](https://gitee.com/dianjiu/task-manage/badge/star.svg?theme=white)](https://gitee.com/dianjiu/task-manage) 
+![SpringBoot](https://img.shields.io/badge/springboot-2.3.1-green.svg?style=flat-square) [![LICENSE](https://img.shields.io/github/license/dianjiu/job-plus.svg?style=flat-square)](https://github.com/dianjiu/job-plus/blob/master/LICENSE)   [![star](https://img.shields.io/github/stars/dianjiu/job-plus.svg?label=Stars&style=social)](https://github.com/dianjiu/job-plus) [![star](https://gitee.com/dianjiu/job-plus/badge/star.svg?theme=white)](https://gitee.com/dianjiu/job-plus) 
 
 
-[https://github.com/dianjiu/task-manage](https://github.com/dianjiu/task-manage)
+[https://github.com/dianjiu/job-plus](https://github.com/dianjiu/job-plus)
 
-[https://gitee.io/dianjiu/task-manage](https://gitee.io/dianjiu/task-manage)
+[https://gitee.io/dianjiu/job-plus](https://gitee.io/dianjiu/job-plus)
 
 ## 项目功能
 1. 架构潮流：系统采用SpringBoot+VUE前后端分离，前端单独部署，Nginx负载均衡
@@ -94,7 +94,7 @@
 
 ## 在线演示
 
-http://task.dianjiu.org.cn   (部署中。。。)
+http://jobplus.dianjiu.org.cn   (部署中。。。)
 
 测试账号  	测试密码
 
@@ -107,11 +107,11 @@ user 		user
 ### 页面演示
 > 登录页
 
-![登录页](./data/img/task-manage-login.jpg)
+![登录页](./data/img/job-plus-login.jpg)
 
 > 仪表盘
 
-![仪表盘](./data/img/task-manage-index.jpg)
+![仪表盘](./data/img/job-plus-index.jpg)
 
 > 任务管理 =》任务列表
 
@@ -133,10 +133,10 @@ user 		user
 
 ```bash
 # 克隆项目
-git clone https://github.com/dianjiu/task-manage-vue.git
+git clone https://github.com/dianjiu/job-plus-vue.git
 
 # 进入项目目录
-cd task-manage-vue
+cd job-plus-vue
 
 # 安装依赖
 yarn install
