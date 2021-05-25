@@ -3,7 +3,7 @@
     <logo v-if="showLogo" :collapse="isCollapse" />
     <div class="sys-name">
       <transition-group name="fade">
-        <p key="1" v-show="!isCollapse">Task Manage</p >
+        <p key="1" v-show="!isCollapse">Job Plus</p >
       </transition-group>
       <transition-group name="fade">
         <p key="2" v-show="isCollapse"><i class="el-icon-loading"></i></p>

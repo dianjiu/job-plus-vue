@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/task-manage-vue.iml" filepath="$PROJECT_DIR$/.idea/task-manage-vue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/job-plus-vue.iml" filepath="$PROJECT_DIR$/.idea/job-plus-vue.iml" />
     </modules>
   </component>
 </project>

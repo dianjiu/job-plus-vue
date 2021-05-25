@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Task Manage Vue',
+  title: 'Job Plus',
 
   /**
    * @type {boolean} true | false
