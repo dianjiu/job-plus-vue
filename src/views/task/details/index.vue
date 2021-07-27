@@ -144,7 +144,7 @@ export default {
         groupName:""
       },
       paginationParams:{
-        page:1,
+        pageNum:1,
         pageSize:10
       },
       submitForm:{
@@ -180,14 +180,16 @@ export default {
       let params = {
         ...this.paginationParams
       }
+      params.data = "";
       Object.keys(this.searchForm).forEach(key => {
         if(this.searchForm[key]){
-          params[key] = this.searchForm[key]
+          params.data[key] = this.searchForm[key]
         }
       })
       getTaskList(params).then(res => {
         this.loading = false
         // this.tableData = res.list
+        console.log(res);
         this.tableData = res
         // this.total = res.total
 
