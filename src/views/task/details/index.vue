@@ -128,16 +128,16 @@ export default {
       loading:false,
       tableData:[],
       tableColumn:[
-        {props:'id',label:'ID',width:120},
-        {props:'taskName',label:'任务名称'},
-        {props:'groupName',label:'分组名称',},
+        {props:'id',label:'ID',width:60},
+        {props:'taskName',label:'任务名称',width:120},
+        {props:'groupName',label:'分组名称',width:120},
         {props:'taskDesc',label:'任务描述'},
         {props:'cornRule',label:'CRON表达式',width:120},
         {props:'sendType',label:'请求方式'},
-        {props:'sendUrl',label:'请求地址',width:200},
+        {props:'sendUrl',label:'请求地址',width:300},
         {props:'sendParam',label:'请求参数'},
         {props:'status',label:'任务状态',option:taskStatus},
-        {props:'nextExecuteTime',label:'下次执行时间',width:140},
+        {props:'nextExecuteTime',label:'下次执行时间',width:160},
       ],
       searchForm:{
         taskName:"",
@@ -189,7 +189,7 @@ export default {
       getTaskList(params).then(res => {
         this.loading = false
         // this.tableData = res.list
-        console.log(res);
+        // console.log(res);
         this.tableData = res.data
         this.total = res.total
 
