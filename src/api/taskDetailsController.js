@@ -1,5 +1,5 @@
 import req from '@/utils/myreq'
-let baseUrl = "/api/tTaskDetails"
+let baseUrl = "/tTaskDetails"
 /**
  * 任务信息列表
  * 

@@ -180,7 +180,7 @@ export default {
       let params = {
         ...this.paginationParams
       }
-      params.data = "";
+      params.data = new Object();
       Object.keys(this.searchForm).forEach(key => {
         if(this.searchForm[key]){
           params.data[key] = this.searchForm[key]
@@ -190,8 +190,8 @@ export default {
         this.loading = false
         // this.tableData = res.list
         console.log(res);
-        this.tableData = res
-        // this.total = res.total
+        this.tableData = res.data
+        this.total = res.total
 
       }).catch(err => {
         console.log(err)
