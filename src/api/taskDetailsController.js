@@ -13,7 +13,7 @@ export function getTaskList(data) {
  * 
  */
 export function getTaskInfo(id) {
-  return req.get(`${baseUrl}/get`,{id})
+  return req.postJson(`${baseUrl}/get`,{id})
 }
 /**
  * 删除任务信息详情
@@ -41,7 +41,7 @@ export function optionTask(params) {
  * 
  */
 export function runTask(data) {
-  return req.postJson(`${baseUrl}/runtask`,data)
+  return req.post(`${baseUrl}/runtask`,data)
 }
 /**
  * 编辑任务
